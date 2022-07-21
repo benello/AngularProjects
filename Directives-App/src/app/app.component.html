@@ -3,5 +3,5 @@
 <p class="m-3" *ngIf="showDetails">Secret Password = tuna</p>
 
 <div class="container-fluid">
-  <p *ngFor="let click of log" [ngStyle]="{'background-color': click >= 5 ? 'blue' : 'transparent'}" [ngClass]="{white:click >= 5}">{{ click }}</p>
+  <p *ngFor="let click of log; let i = index" [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent'}" [ngClass]="{white:i >= 4}">{{ click }}</p>
 </div>
