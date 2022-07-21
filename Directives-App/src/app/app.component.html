@@ -1,0 +1,7 @@
+<button class="btn btn-primary m-3" (click)="onShowDetails()">Display Details</button>
+
+<p class="m-3" *ngIf="showDetails">Secret Password = tuna</p>
+
+<div class="container-fluid">
+  <p *ngFor="let click of log" [ngStyle]="{'background-color': click >= 5 ? 'blue' : 'transparent'}" [ngClass]="{white:click >= 5}">{{ click }}</p>
+</div>
