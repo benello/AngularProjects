@@ -2,6 +2,11 @@
   <div class="col-xs-10">
     <app-edit></app-edit>
     <hr>
-    <p>The list</p>
+    <ul class="list-group list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ingredient of ingredients">
+        {{ ingredient.name }}
+        <span class="badge bg-danger rounded-pill ">{{ ingredient.amount }}</span>
+      </li>
+    </ul>
   </div>
 </div>
