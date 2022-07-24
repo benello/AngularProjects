@@ -11,20 +11,23 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { EditComponent } from './shopping-list/edit/edit.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeInfoComponent,
-    RecipeComponent,
-    ShoppingListComponent,
-    EditComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        RecipesComponent,
+        RecipeListComponent,
+        RecipeInfoComponent,
+        RecipeComponent,
+        ShoppingListComponent,
+        EditComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [],
+    exports: [
+        EditComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
