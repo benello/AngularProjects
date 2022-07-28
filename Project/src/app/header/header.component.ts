@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, EventEmitter, Output} from "@angular/core";
 
 @Component({
   selector: 'app-head',
@@ -6,5 +6,10 @@ import {Component} from "@angular/core";
 })
 
 export class HeaderComponent{
+  @Output() featureSelected = new EventEmitter<number>();
+
+  onSelect(menuItem: number){
+    this.featureSelected.emit(menuItem);
+  }
 
 }

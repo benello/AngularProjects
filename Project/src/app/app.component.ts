@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Project';
+  loadedMenuItem = 0;
+
+  onNavigate(menuItem: number){
+    this.loadedMenuItem = menuItem
+  }
 }

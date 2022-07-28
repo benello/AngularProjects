@@ -1,0 +1,9 @@
+<button href="#" class="list-group-item list-group-item-action my-2" (click)="getRecipe()">
+  <div class="float-start mt-3">
+    <h4> {{recipe.name}} </h4>
+    <p> {{recipe.desc}} </p>
+  </div>
+  <span class="float-end mt-3">
+      <img [src]="recipe.imagePath" class="img-fluid" style="max-height: 50px;">
+    </span>
+</button>

@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-edit></app-edit>
+    <app-edit (ingredientAdded)="OnIngredientAdd($event)"></app-edit>
     <hr>
     <ul class="list-group list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ingredient of ingredients">
+      <button class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ingredient of ingredients">
         {{ ingredient.name }}
         <span class="badge bg-danger rounded-pill ">{{ ingredient.amount }}</span>
-      </li>
+      </button>
     </ul>
   </div>
 </div>
