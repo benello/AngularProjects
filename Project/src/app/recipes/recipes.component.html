@@ -2,10 +2,10 @@
   <div class="col-md-5">
     <app-recipe-list (CurrRecipeSelected)="currRecipe = $event"></app-recipe-list>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-7 d-flex align-self-center justify-content-center">
     <app-recipe-info *ngIf="currRecipe; else infoText" [recipe]="currRecipe"></app-recipe-info>
     <ng-template #infoText>
-      <p class="my-5">Please select a Recipe!</p>
+      <span class="">Please select a Recipe!</span>
     </ng-template>
   </div>
 </div>
