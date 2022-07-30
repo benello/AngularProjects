@@ -1,4 +1,5 @@
-import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {ShoppingListService} from "../shopping-list.service";
 import {Ingredient} from "../../shared/Ingredient.modal";
 
 @Component({
@@ -9,13 +10,12 @@ import {Ingredient} from "../../shared/Ingredient.modal";
 export class EditComponent implements OnInit {
   @ViewChild('nameInput', {static: false}) nameInputRef: ElementRef;
   @ViewChild('amtInput', {static: false}) amtInputRef: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   addItem(){
-    const newIngredient = new Ingredient(this.nameInputRef.nativeElement.value, this.amtInputRef.nativeElement.value);
-    this.ingredientAdded.emit(newIngredient);
+    const newIngredient = [new Ingredient(this.nameInputRef.nativeElement.value, this.amtInputRef.nativeElement.value)];
+    this.shoppinglistService.addItem(newIngredient);
   }
-  constructor() { }
+  constructor(private shoppinglistService: ShoppingListService) { }
 
   ngOnInit(): void {
   }
