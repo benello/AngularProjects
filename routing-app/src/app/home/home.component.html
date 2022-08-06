@@ -1,4 +1,8 @@
 <h4>Welcome to Server Manager 4.0</h4>
 <p>Manage your Servers and Users.</p>
-
-
+<button class="btn btn-outline-primary" (click)="onLoadServer(1)">Load Server</button>
+<hr>
+<div>
+  <button class="btn btn-outline-dark" (click)="changeStatus(true)">Login</button>
+  <button class="btn btn-outline-dark mx-1" (click)="changeStatus(false)">Logout</button>
+</div>
